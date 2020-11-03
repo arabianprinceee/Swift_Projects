@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIKit_Course_TrainingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="900"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m9o-4G-qNe">
+                                <rect key="frame" x="0.0" y="35" width="414" height="831"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="U4f-S2-exb">
+                                        <rect key="frame" x="20" y="20" width="374" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="feQ-En-3hb"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                        <color key="selectedSegmentTintColor" systemColor="systemTealColor"/>
+                                        <connections>
+                                            <action selector="ChoiceSegment:" destination="BYZ-38-t0r" eventType="valueChanged" id="9sn-3S-5zY"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmE-8X-9VL">
+                                        <rect key="frame" x="20" y="242" width="374" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gpk-t8-fEq">
+                                        <rect key="frame" x="18" y="333" width="378" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="r8I-5j-UuL"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="SlideSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="juQ-0P-0FC"/>
+                                        </connections>
+                                    </slider>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BBv-SA-pe2">
+                                        <rect key="frame" x="20" y="414" width="374" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="58i-Tx-CoF"/>
+                                            <constraint firstAttribute="width" constant="374" id="7lF-c7-QbF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3WL-Yv-nXp">
+                                        <rect key="frame" x="20" y="474" width="374" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="ahm-z1-2bv"/>
+                                            <constraint firstAttribute="width" constant="374" id="iiB-s6-bEt"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="TFButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ip7-Fq-nnq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="BBv-SA-pe2" firstAttribute="top" secondItem="gpk-t8-fEq" secondAttribute="bottom" constant="51" id="2Tq-VZ-LJn"/>
+                                    <constraint firstItem="gpk-t8-fEq" firstAttribute="width" secondItem="vmE-8X-9VL" secondAttribute="width" id="GqL-t5-vnh"/>
+                                    <constraint firstItem="gpk-t8-fEq" firstAttribute="top" secondItem="vmE-8X-9VL" secondAttribute="bottom" constant="70" id="RAm-kW-81r"/>
+                                    <constraint firstItem="3WL-Yv-nXp" firstAttribute="top" secondItem="BBv-SA-pe2" secondAttribute="bottom" constant="26" id="XZZ-sK-MbI"/>
+                                    <constraint firstItem="vmE-8X-9VL" firstAttribute="top" secondItem="U4f-S2-exb" secondAttribute="bottom" constant="192" id="zIj-qr-tly"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Xht-BH-qeg"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="zwc-JJ-l5t"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                    </view>
+                    <size key="freeformSize" width="414" height="900"/>
+                    <connections>
+                        <outlet property="ButtonForTF" destination="3WL-Yv-nXp" id="qTE-Eh-JsZ"/>
+                        <outlet property="MyLabel" destination="vmE-8X-9VL" id="Seg-YN-ANu"/>
+                        <outlet property="SegControl" destination="U4f-S2-exb" id="Xrw-fS-Ajv"/>
+                        <outlet property="Slider" destination="gpk-t8-fEq" id="377-5l-kgw"/>
+                        <outlet property="TextField" destination="BBv-SA-pe2" id="Z6R-YS-4vy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121.73913043478262" y="-365.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

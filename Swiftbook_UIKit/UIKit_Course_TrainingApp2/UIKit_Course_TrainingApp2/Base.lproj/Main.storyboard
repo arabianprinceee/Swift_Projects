@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIKit_Course_TrainingApp2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xPt-ZT-4Cf">
+                                <rect key="frame" x="20" y="44" width="374" height="789.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTk-bL-KvF">
+                                <rect key="frame" x="20" y="841.5" width="41.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Nbm-MB-VG7">
+                                <rect key="frame" x="300" y="835" width="94" height="32"/>
+                                <connections>
+                                    <action selector="FontSize:" destination="BYZ-38-t0r" eventType="valueChanged" id="osT-1K-baQ"/>
+                                </connections>
+                            </stepper>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="6pV-9w-wAe">
+                                <rect key="frame" x="197" y="437" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xw3-Nj-eM1">
+                                <rect key="frame" x="106" y="44" width="202" height="4"/>
+                            </progressView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.98550462800000005" green="0.9424123378" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Nbm-MB-VG7" firstAttribute="leading" relation="lessThanOrEqual" secondItem="DTk-bL-KvF" secondAttribute="trailing" constant="238.5" id="04O-u5-SjM"/>
+                            <constraint firstItem="xw3-Nj-eM1" firstAttribute="width" secondItem="xPt-ZT-4Cf" secondAttribute="width" multiplier="0.540107" id="1un-Cu-vvl"/>
+                            <constraint firstItem="6pV-9w-wAe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="197" id="8T4-W1-UG8"/>
+                            <constraint firstItem="6pV-9w-wAe" firstAttribute="centerX" secondItem="xPt-ZT-4Cf" secondAttribute="centerX" id="AAk-FD-B21"/>
+                            <constraint firstItem="xw3-Nj-eM1" firstAttribute="centerX" secondItem="xPt-ZT-4Cf" secondAttribute="centerX" id="D9m-dJ-z6H"/>
+                            <constraint firstItem="Nbm-MB-VG7" firstAttribute="top" secondItem="xPt-ZT-4Cf" secondAttribute="bottom" constant="1.5" id="Go3-9E-ibt"/>
+                            <constraint firstItem="DTk-bL-KvF" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="JK8-p9-qS2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xPt-ZT-4Cf" secondAttribute="trailing" constant="20" id="MfY-YZ-Gu2"/>
+                            <constraint firstAttribute="bottom" secondItem="Nbm-MB-VG7" secondAttribute="bottom" constant="29" id="PBe-d4-cLd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DTk-bL-KvF" secondAttribute="trailing" constant="289" id="QNJ-WG-G8Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6pV-9w-wAe" secondAttribute="trailing" constant="197" id="Qep-LH-rEx"/>
+                            <constraint firstItem="xPt-ZT-4Cf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="RkX-2c-9a2"/>
+                            <constraint firstItem="DTk-bL-KvF" firstAttribute="top" secondItem="xPt-ZT-4Cf" secondAttribute="bottom" constant="8" symbolic="YES" id="Tza-Qo-pAp"/>
+                            <constraint firstItem="6pV-9w-wAe" firstAttribute="top" secondItem="xPt-ZT-4Cf" secondAttribute="bottom" constant="-396.5" id="XTB-5l-7FZ"/>
+                            <constraint firstItem="DTk-bL-KvF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="XxX-Ft-QGX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nbm-MB-VG7" secondAttribute="trailing" constant="20" id="fLg-XE-FCn"/>
+                            <constraint firstItem="xPt-ZT-4Cf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kz1-lP-h84"/>
+                            <constraint firstItem="xw3-Nj-eM1" firstAttribute="top" secondItem="xPt-ZT-4Cf" secondAttribute="top" id="oOe-dz-SEj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ActivityIndicator" destination="6pV-9w-wAe" id="6yY-ck-YGy"/>
+                        <outlet property="Label" destination="DTk-bL-KvF" id="xrH-ev-vYK"/>
+                        <outlet property="ProgressView" destination="xw3-Nj-eM1" id="30I-Yi-dfa"/>
+                        <outlet property="Stepper" destination="Nbm-MB-VG7" id="Lyh-tZ-Xs2"/>
+                        <outlet property="textView" destination="xPt-ZT-4Cf" id="us4-Y7-s6q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

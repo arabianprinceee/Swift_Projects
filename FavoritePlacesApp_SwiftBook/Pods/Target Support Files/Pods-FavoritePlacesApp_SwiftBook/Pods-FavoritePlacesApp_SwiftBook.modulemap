@@ -1,0 +1,6 @@
+framework module Pods_FavoritePlacesApp_SwiftBook {
+  umbrella header "Pods-FavoritePlacesApp_SwiftBook-umbrella.h"
+
+  export *
+  module * { export * }
+}
