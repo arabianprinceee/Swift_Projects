@@ -15,6 +15,8 @@
 		3585ECB723AB388700F49C82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3585ECB623AB388700F49C82 /* SceneDelegate.swift */; };
 		35F6275723EE6DCD00090812 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35F6275623EE6DCD00090812 /* Main.storyboard */; };
 		35F6275A23EE6FB000090812 /* MyCars.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 35F6275823EE6FB000090812 /* MyCars.xcdatamodeld */; };
+		D963CA422551B5EE0008B49A /* Car+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D963CA402551B5EE0008B49A /* Car+CoreDataClass.swift */; };
+		D963CA432551B5EE0008B49A /* Car+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D963CA412551B5EE0008B49A /* Car+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		35F2F4DF1C084725000E1CB3 /* MyCars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F6275623EE6DCD00090812 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		35F6275923EE6FB000090812 /* MyCars.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyCars.xcdatamodel; sourceTree = "<group>"; };
+		D963CA402551B5EE0008B49A /* Car+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Car+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D963CA412551B5EE0008B49A /* Car+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Car+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +48,8 @@
 		359705941C08159E00D13FE9 = {
 			isa = PBXGroup;
 			children = (
+				D963CA402551B5EE0008B49A /* Car+CoreDataClass.swift */,
+				D963CA412551B5EE0008B49A /* Car+CoreDataProperties.swift */,
 				3597059F1C08159E00D13FE9 /* MyCars */,
 				3597059E1C08159E00D13FE9 /* Products */,
 			);
@@ -100,7 +106,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1210;
 				ORGANIZATIONNAME = "Ivan Akulov";
 				TargetAttributes = {
 					35F2F4DE1C084725000E1CB3 = {
@@ -150,6 +156,8 @@
 				352762E11C0AEF3600A3BABA /* ViewController.swift in Sources */,
 				352762E01C0AEF3400A3BABA /* AppDelegate.swift in Sources */,
 				35F6275A23EE6FB000090812 /* MyCars.xcdatamodeld in Sources */,
+				D963CA422551B5EE0008B49A /* Car+CoreDataClass.swift in Sources */,
+				D963CA432551B5EE0008B49A /* Car+CoreDataProperties.swift in Sources */,
 				3585ECB723AB388700F49C82 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,6 +199,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -215,7 +224,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -246,6 +255,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -264,7 +274,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
