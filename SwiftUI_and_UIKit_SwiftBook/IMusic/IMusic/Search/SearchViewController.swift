@@ -103,3 +103,17 @@ extension SearchViewController : UISearchBarDelegate {
         interactor?.makeRequest(request: Search.Model.Request.RequestType.getTracks(searchText: searchText))
     }
 }
+
+//extension SearchViewController {
+//    func dismissKey()
+//    {
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer( target: self, action: #selector(SearchViewController.dismissKeyboard))
+//        tap.cancelsTouchesInView = false
+//        view.addGestureRecognizer(tap)
+//    }
+//
+//    @objc func dismissKeyboard()
+//    {
+//        view.endEditing(true)
+//    }
+//}
