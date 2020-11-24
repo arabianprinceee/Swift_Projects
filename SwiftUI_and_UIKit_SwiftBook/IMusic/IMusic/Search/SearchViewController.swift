@@ -18,6 +18,7 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     @IBOutlet weak var table: UITableView!
     var interactor: SearchBusinessLogic?
     var router: (NSObjectProtocol & SearchRoutingLogic)?
+    private var _searchViewModel = SearchViewModel(cells: [])
     
     // MARK: Setup
     
@@ -50,11 +51,15 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     private func setupSearchBar() {
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.delegate = self
     }
     
     private func setupTableView() {
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cellId")
+        
+        let nib = UINib(nibName: "TrackCell", bundle: nil)
+        table.register(nib, forCellReuseIdentifier: TrackCell.reuseID)
     }
     
     func displayData(viewModel: Search.Model.ViewModel.ViewModelData) {
@@ -62,29 +67,39 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
         switch viewModel {
         case .some:
             print("VC.some")
-        case .displayTracks:
-            print("VC.displayTracks")
+        case .displayTracks (let searchViewModel):
+            self._searchViewModel = searchViewModel
+            table.reloadData()
         }
     }
+    
+    
 }
 
 // MARK: UITableViewDelegate, UITableViewDataSource
 extension SearchViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return self._searchViewModel.cells.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = table.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
-        cell.textLabel?.text = "\(indexPath)"
+        let cell = table.dequeueReusableCell(withIdentifier: "TrackCell", for: indexPath) as! TrackCell
+        
+        let cellViewModel = _searchViewModel.cells[indexPath.row]
+        cell.TrackImageView.image = #imageLiteral(resourceName: "library")
+        cell.set(viewModel: cellViewModel)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 84 
     }
 }
 
 extension SearchViewController : UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print(searchText)
-        interactor?.makeRequest(request: Search.Model.Request.RequestType.getTracks)
+        interactor?.makeRequest(request: Search.Model.Request.RequestType.getTracks(searchText: searchText))
     }
 }
