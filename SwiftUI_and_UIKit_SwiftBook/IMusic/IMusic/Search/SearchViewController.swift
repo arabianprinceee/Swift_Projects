@@ -20,6 +20,8 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     var router: (NSObjectProtocol & SearchRoutingLogic)?
     private var _searchViewModel = SearchViewModel(cells: [])
     
+    lazy private var footerView = FooterView()
+    
     // MARK: Setup
     
     private func setup() {
@@ -60,16 +62,20 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
         
         let nib = UINib(nibName: "TrackCell", bundle: nil)
         table.register(nib, forCellReuseIdentifier: TrackCell.reuseID)
+        
+        table.tableFooterView = footerView
+        
     }
     
     func displayData(viewModel: Search.Model.ViewModel.ViewModelData) {
         
         switch viewModel {
-        case .some:
-            print("VC.some")
         case .displayTracks (let searchViewModel):
             self._searchViewModel = searchViewModel
             table.reloadData()
+            footerView.hideLoader()
+        case .displayFooterVIew:
+            footerView.showLoader()
         }
     }
     
@@ -95,7 +101,21 @@ extension SearchViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 84 
     }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label = UILabel()
+        label.text = "Please, enter search term above..."
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 18, weight: .thin)
+        return label
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return _searchViewModel.cells.count > 0 ? 0 : 250
+    }
 }
+
+// MARK: UISearchBarDelegate
 
 extension SearchViewController : UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -103,17 +123,3 @@ extension SearchViewController : UISearchBarDelegate {
         interactor?.makeRequest(request: Search.Model.Request.RequestType.getTracks(searchText: searchText))
     }
 }
-
-//extension SearchViewController {
-//    func dismissKey()
-//    {
-//        let tap: UITapGestureRecognizer = UITapGestureRecognizer( target: self, action: #selector(SearchViewController.dismissKeyboard))
-//        tap.cancelsTouchesInView = false
-//        view.addGestureRecognizer(tap)
-//    }
-//
-//    @objc func dismissKeyboard()
-//    {
-//        view.endEditing(true)
-//    }
-//}

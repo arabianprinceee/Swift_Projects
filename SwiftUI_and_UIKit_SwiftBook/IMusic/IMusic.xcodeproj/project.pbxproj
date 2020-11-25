@@ -10,6 +10,7 @@
 		4116BB0434F8DDDB64144AA0 /* Pods_IMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F44CD0176BF4EB5347532FE7 /* Pods_IMusic.framework */; };
 		D9268801256D1D06003B6755 /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9268800256D1D06003B6755 /* TrackCell.xib */; };
 		D9268804256D1D2B003B6755 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9268803256D1D2B003B6755 /* TrackCell.swift */; };
+		D932B27E256EF2B200FC14C4 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D932B27D256EF2B200FC14C4 /* FooterView.swift */; };
 		D988EED02569533E005A81F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D988EECF2569533E005A81F7 /* AppDelegate.swift */; };
 		D988EED22569533E005A81F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D988EED12569533E005A81F7 /* SceneDelegate.swift */; };
 		D988EED42569533E005A81F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D988EED32569533E005A81F7 /* ViewController.swift */; };
@@ -34,6 +35,7 @@
 		A844382F7BE7B9B5DF08AFDB /* Pods-IMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMusic.release.xcconfig"; path = "Target Support Files/Pods-IMusic/Pods-IMusic.release.xcconfig"; sourceTree = "<group>"; };
 		D9268800256D1D06003B6755 /* TrackCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
 		D9268803256D1D2B003B6755 /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
+		D932B27D256EF2B200FC14C4 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		D988EECC2569533E005A81F7 /* IMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D988EECF2569533E005A81F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D988EED12569533E005A81F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,14 @@
 			path = DataModels;
 			sourceTree = "<group>";
 		};
+		D932B27C256EF2A400FC14C4 /* FooterView */ = {
+			isa = PBXGroup;
+			children = (
+				D932B27D256EF2B200FC14C4 /* FooterView.swift */,
+			);
+			path = FooterView;
+			sourceTree = "<group>";
+		};
 		D988EEC32569533E005A81F7 = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +160,7 @@
 		D9DE6EBF256AD61600F55935 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				D932B27C256EF2A400FC14C4 /* FooterView */,
 				D92687FF256D1CEA003B6755 /* Cell */,
 				D9DE6EE1256AD92000F55935 /* SearchViewController.storyboard */,
 				D9DE6ED6256AD79F00F55935 /* SearchViewController.swift */,
@@ -290,6 +301,7 @@
 				D988EEE82569549A005A81F7 /* SearchMusicViewController.swift in Sources */,
 				D988EED42569533E005A81F7 /* ViewController.swift in Sources */,
 				D9DE6EDE256AD79F00F55935 /* SearchInteractor.swift in Sources */,
+				D932B27E256EF2B200FC14C4 /* FooterView.swift in Sources */,
 				D9268804256D1D2B003B6755 /* TrackCell.swift in Sources */,
 				D988EED02569533E005A81F7 /* AppDelegate.swift in Sources */,
 				D988EEE525695390005A81F7 /* MainTabBarController.swift in Sources */,
