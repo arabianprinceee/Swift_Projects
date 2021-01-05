@@ -3,21 +3,24 @@
 //  IMusic
 //
 //  Created by Анас Бен Мустафа on 1/1/21.
-//  Copyright © 2021 Алексей Пархоменко. All rights reserved.
+//  Copyright © 2021 Анас Бен Мустафа. All rights reserved.
 //
 
 import SwiftUI
 import URLImage
 
 struct Library: View {
-    var tracks = UserDefaults.standard.savedTracks()
+    @State var tracks = UserDefaults.standard.savedTracks()
+    @State private var showingAlert = false
+    @State private var track: SearchViewModel.Cell!
+    
     var body: some View {
         NavigationView {
             VStack (spacing: 0) {
                 GeometryReader { geometry in
                     HStack (spacing: 20) {
                         Button(action: {
-                            print("12345")
+                            self.track = self.tracks[0]
                         }, label: {
                             Image(systemName: "play.fill")
                                 .frame(width: abs(geometry.size.width / 2 - 10), height: 50)
@@ -38,12 +41,39 @@ struct Library: View {
                 }.padding().frame(height: 50)
                 Divider().padding(.top, 25).padding(.leading).padding(.trailing)
                 
-                List (tracks) { track in
-                    LibraryCell(cell: track)
+                List {
+                    ForEach (tracks) { track in
+                        LibraryCell(cell: track).gesture(LongPressGesture().onEnded({ _ in
+                            self.track = track
+                            self.showingAlert = true
+                        }))
+                    }.onDelete(perform: delete)
                 }.listStyle(PlainListStyle())
-            }
+            }.actionSheet(isPresented: $showingAlert, content: {
+                ActionSheet(title: Text("delete?"), buttons: [.destructive(Text("Delete"), action: {
+                    self.delete(track: self.track)
+                }), .cancel() ])
+            })
             
             .navigationBarTitle("Library")
+        }
+    }
+    
+    func delete(at offsets: IndexSet) {
+        tracks.remove(atOffsets: offsets)
+        if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: tracks, requiringSecureCoding: false) {
+            let defaults = UserDefaults.standard
+            defaults.set(savedData, forKey: UserDefaults.favouriteTrackKey)
+        }
+    }
+    
+    func delete(track: SearchViewModel.Cell) {
+        let index = tracks.firstIndex(of: track)
+        guard let myindex = index else { return }
+        tracks.remove(at: myindex)
+        if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: tracks, requiringSecureCoding: false) {
+            let defaults = UserDefaults.standard
+            defaults.set(savedData, forKey: UserDefaults.favouriteTrackKey)
         }
     }
 }

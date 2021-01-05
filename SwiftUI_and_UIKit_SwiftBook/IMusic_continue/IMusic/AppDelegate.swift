@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  IMusic
 //
-//  Created by Алексей Пархоменко on 11/08/2019.
-//  Copyright © 2019 Алексей Пархоменко. All rights reserved.
+//  Created by Анас Бен Мустафа on 1/1/21.
+//  Copyright © 2021 Анас Бен Мустафа. All rights reserved.
 //
 
 import UIKit
