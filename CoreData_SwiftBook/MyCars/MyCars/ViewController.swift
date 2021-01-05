@@ -33,6 +33,7 @@ class ViewController: UIViewController {
             UISegmentedControl.appearance().setTitleTextAttributes(blackTitleTextAttributes, for: .selected)
         }
     }
+    
     @IBOutlet weak var markLabel: UILabel!
     @IBOutlet weak var modelLabel: UILabel!
     @IBOutlet weak var carImageView: UIImageView!

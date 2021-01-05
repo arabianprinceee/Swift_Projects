@@ -48,8 +48,6 @@
 		359705941C08159E00D13FE9 = {
 			isa = PBXGroup;
 			children = (
-				D963CA402551B5EE0008B49A /* Car+CoreDataClass.swift */,
-				D963CA412551B5EE0008B49A /* Car+CoreDataProperties.swift */,
 				3597059F1C08159E00D13FE9 /* MyCars */,
 				3597059E1C08159E00D13FE9 /* Products */,
 			);
@@ -66,6 +64,8 @@
 		3597059F1C08159E00D13FE9 /* MyCars */ = {
 			isa = PBXGroup;
 			children = (
+				D963CA402551B5EE0008B49A /* Car+CoreDataClass.swift */,
+				D963CA412551B5EE0008B49A /* Car+CoreDataProperties.swift */,
 				359705A01C08159E00D13FE9 /* AppDelegate.swift */,
 				3585ECB623AB388700F49C82 /* SceneDelegate.swift */,
 				359705A21C08159E00D13FE9 /* ViewController.swift */,
