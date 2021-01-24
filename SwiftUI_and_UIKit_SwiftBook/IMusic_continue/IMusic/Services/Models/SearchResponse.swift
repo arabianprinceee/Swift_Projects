@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 struct SearchResponse: Decodable {
     var resultCount: Int
     var results: [Track]

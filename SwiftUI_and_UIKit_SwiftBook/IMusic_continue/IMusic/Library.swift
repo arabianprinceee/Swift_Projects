@@ -17,30 +17,6 @@ struct Library: View {
     var body: some View {
         NavigationView {
             VStack (spacing: 0) {
-                GeometryReader { geometry in
-                    HStack (spacing: 20) {
-                        Button(action: {
-                            self.track = self.tracks[0]
-                        }, label: {
-                            Image(systemName: "play.fill")
-                                .frame(width: abs(geometry.size.width / 2 - 10), height: 50)
-                                .accentColor(Color.init(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)))
-                                .background(Color.init(#colorLiteral(red: 0.9728454947, green: 0.9389790297, blue: 0.9806990027, alpha: 1)))
-                                .cornerRadius(10.0)
-                        })
-                        Button(action: {
-                            print("54321")
-                        }, label: {
-                            Image(systemName: "arrow.2.circlepath")
-                                .frame(width: abs(geometry.size.width / 2 - 10), height: 50)
-                                .accentColor(Color.init(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)))
-                                .background(Color.init(#colorLiteral(red: 0.9728454947, green: 0.9389790297, blue: 0.9806990027, alpha: 1)))
-                                .cornerRadius(10.0)
-                        })
-                    }
-                }.padding().frame(height: 50)
-                Divider().padding(.top, 25).padding(.leading).padding(.trailing)
-                
                 List {
                     ForEach (tracks) { track in
                         LibraryCell(cell: track).gesture(LongPressGesture().onEnded({ _ in
@@ -50,11 +26,10 @@ struct Library: View {
                     }.onDelete(perform: delete)
                 }.listStyle(PlainListStyle())
             }.actionSheet(isPresented: $showingAlert, content: {
-                ActionSheet(title: Text("delete?"), buttons: [.destructive(Text("Delete"), action: {
+                ActionSheet(title: Text("Are you sure you want to delete this track?"), buttons: [.destructive(Text("Delete"), action: {
                     self.delete(track: self.track)
                 }), .cancel() ])
             })
-            
             .navigationBarTitle("Library")
         }
     }
