@@ -101,6 +101,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D960627725BDBE1400DEED97 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
 		F027F27B2300740500AE2985 = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +142,7 @@
 				F027F2902300740600AE2985 /* Assets.xcassets */,
 				F027F2922300740600AE2985 /* LaunchScreen.storyboard */,
 				F027F2952300740600AE2985 /* Info.plist */,
+				D960627725BDBE1400DEED97 /* Screenshots */,
 			);
 			path = IMusic;
 			sourceTree = "<group>";
